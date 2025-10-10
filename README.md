@@ -1,8 +1,27 @@
+<h1 align="center">
+    <img alt="RVM" src="https://github.com/ravarmes/recsys-faders/blob/main/app/static/img/logo.jpg" />
+    <img alt="YouTubeSafeKids" src="https://github.com/ravarmes/recsys-faders/blob/main/app/static/img/logo.svg" width="100" height="100"/>
+</h1>
+
 <h3 align="center">
-  RecSys-Depolarize-Fair
+  FaDeRS: Fairness and Depolarization in Recommender Systems
 </h3>
 
-<p align="center">FaDeRS: Fairness and Depolarization in Recommender Systems</p>
+<p align="center">Filtragem Avançada de Conteúdos Infantis</p>
+
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ravarmes/recsys-faders?color=%2304D361">
+
+  <a href="http://www.linkedin.com/in/rafael-vargas-mesquita">
+    <img alt="Made by Rafael Vargas Mesquita" src="https://img.shields.io/badge/made%20by-Rafael%20Vargas%20Mesquita-%2304D361">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
+
+  <a href="https://github.com/ravarmes/recsys-faders/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/ravarmes/recsys-faders?style=social">
+  </a>
+</p>
 
 ## :page_with_curl: About the project <a name="-sobre"/></a>
 
@@ -32,3 +51,7 @@ Context: Recommender systems have become fundamental in modern society as they h
 | RecSysSVD                            | Singular Value Decomposition for Recommendation Systems is a method that factors the ratings matrix into three smaller matrices, capturing essential information about users and items, which facilitates recommendations by reconstructing the original matrix with missing data filled in. |
 | RecSysNCF                            | Neural Collaborative Filtering is a modern approach to collaborative filtering that uses neural networks to model complex, nonlinear interactions between users and items, aiming to enhance recommendation quality.                                    |
 | TestAlgorithmDepolarizeFair         | Test script for the depolarization and fairness algorithm (AlgorithmDepolarizeFair) |
+
+## :email: Contact
+
+Rafael Vargas Mesquita - [GitHub](https://github.com/ravarmes) - [LinkedIn](https://www.linkedin.com/in/rafael-vargas-mesquita) - [Lattes](http://lattes.cnpq.br/6616283627544820) - **ravarmes@hotmail.com**
