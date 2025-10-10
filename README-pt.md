@@ -1,22 +1,22 @@
 <h3 align="center">
-  RecSys-Depolarize-Fair
+  FaDeRS
 </h3>
 
 <p align="center">Elaboração de uma Estratégia de Despolarização e Justiça Individual em Sistemas de Recomendação. </p>
 
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ravarmes/recsys-depolarize-fair?color=%2304D361">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ravarmes/recsys-faders?color=%2304D361">
 
   <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
 
-  <a href="https://github.com/ravarmes/recsys-depolarize-fair/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/ravarmes/recsys-depolarize-fair?style=social">
+  <a href="https://github.com/ravarmes/recsys-faders/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/ravarmes/recsys-faders?style=social">
   </a>
 </p>
 
 ## :page_with_curl: Sobre o projeto <a name="-sobre"/></a>
 
-Sistemas de recomendação são essenciais para ajudar os usuários a encontrar conteúdo relevante, mas enfrentam desafios como bolhas de filtro e justiça individual de itens. Bolhas de filtro limitam a exposição a informações diversas, e a injustiça impede a recomendação equitativa de itens menos populares. Este artigo apresenta o RecSys-Depolarize-Fair, uma estrutura para reduzir a polarização e promover recomendações justas, utilizando métricas de polarização e justiça para os itens. Experimentos mostram que o algoritmo reduz efetivamente a polarização e equilibra as recomendações sem afetar significativamente a precisão. 
+Sistemas de recomendação são essenciais para ajudar os usuários a encontrar conteúdo relevante, mas enfrentam desafios como bolhas de filtro e justiça individual de itens. Bolhas de filtro limitam a exposição a informações diversas, e a injustiça impede a recomendação equitativa de itens menos populares. Este artigo apresenta o recsys-faders, uma estrutura para reduzir a polarização e promover recomendações justas, utilizando métricas de polarização e justiça para os itens. Experimentos mostram que o algoritmo reduz efetivamente a polarização e equilibra as recomendações sem afetar significativamente a precisão. 
 
 ### :balance_scale: Medidas de Justiça <a name="-medidas"/></a>
 
@@ -27,7 +27,7 @@ Sistemas de recomendação são essenciais para ajudar os usuários a encontrar 
 
 ### :chart_with_upwards_trend: Resultados(s) <a name="-resultados"/></a>
 
-[Link para o arquivo Excel](https://github.com/ravarmes/recsys-depolarize-fair/blob/main/_results-article.xlsx)
+[Link para o arquivo Excel](https://github.com/ravarmes/recsys-faders/blob/main/_results-article.xlsx)
 
 
 ### Arquivos
