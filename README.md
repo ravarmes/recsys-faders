@@ -6,7 +6,7 @@
   FaDeRS: Fairness and Depolarization in Recommender Systems
 </h3>
 
-<p align="center">Filtragem Avançada de Conteúdos Infantis</p>
+<p align="center">WebMedia 2025: 31st Brazilian Symposium on Multimedia and the Web</p>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/ravarmes/recsys-faders?color=%2304D361">
