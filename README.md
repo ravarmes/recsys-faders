@@ -1,6 +1,5 @@
 <h1 align="center">
-    <img alt="RVM" src="https://github.com/ravarmes/recsys-faders/blob/main/app/static/img/logo.jpg" />
-    <img alt="YouTubeSafeKids" src="https://github.com/ravarmes/recsys-faders/blob/main/app/static/img/logo.svg" width="100" height="100"/>
+    <img alt="RVM" src="https://github.com/ravarmes/recsys-faders/blob/main/assets/logo.jpg" />
 </h1>
 
 <h3 align="center">
