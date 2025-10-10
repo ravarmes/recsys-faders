@@ -64,7 +64,7 @@ datasets = ['MovieLens-1M', 'Goodbooks-10k']
 # recommendation algorithms - all available algorithms (excluding RecSysNCF due to TensorFlow issues)
 # algorithms = ['RecSysALS', 'RecSysKNN', 'RecSysNMF', 'RecSysSGD', 'RecSysSVD']
 
-algorithms = ['RecSysSGD', 'RecSysSVD']
+algorithms = ['RecSysALS']
 
 # estimated number of matrices (h)
 hs = [4, 8, 12, 16, 20, 24, 28, 32, 36, 40]
@@ -77,7 +77,9 @@ print(f"Datasets: {datasets}")
 
 for dataset in datasets:
 
-    Data_path = "../data/"+ dataset    
+    from pathlib import Path
+    # Construir o caminho para a pasta de dados de forma robusta, relativo ao arquivo atual
+    Data_path = (Path(__file__).resolve().parent.parent / "data" / dataset).as_posix()
 
     for alpha in alphas:
 

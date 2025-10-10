@@ -53,6 +53,7 @@ Context: Recommender systems have become fundamental in modern society as they h
 
 ## :hammer_and_wrench: Usage
 
+- Main class: src/TestAlgorithmDepolarizeFair.py — just run this script to execute the FaDeRS algorithm end-to-end.
 - Install dependencies:
   - Windows: `python -m pip install -r requirements.txt`
 - Run the experiments:
