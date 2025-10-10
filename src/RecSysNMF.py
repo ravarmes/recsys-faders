@@ -7,15 +7,17 @@ class RecSysNMF:
     __metaclass__ = ABCMeta
 
     def __init__(self, n_components, ratings=None):
+        # Initialize NMF recommender with n_components and optional ratings.
         self.n_components = n_components
         if ratings is not None:
             self.set_ratings(ratings)
 
     def set_ratings(self, ratings):
+        # Set ratings and handle NaNs for NMF.
         self.ratings = ratings
 
     def fit_model(self, max_iter=200, tol=1e-4):
-        # Inicializa o modelo NMF
+        # Factorize ratings via NMF and compute prediction matrix.
         model = NMF(n_components=self.n_components, max_iter=max_iter, tol=tol, init='random')
         
         # A matriz de classificações pode conter NaNs, que não podem ser processados diretamente pelo NMF.

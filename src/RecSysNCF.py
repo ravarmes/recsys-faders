@@ -11,6 +11,7 @@ from math import sqrt
 
 class RecSysNCF:
     def __init__(self, n_users, n_items, n_factors, ratings=None):
+        # Initialize Neural Collaborative Filtering dimensions and optional ratings.
         self.n_users = n_users
         self.n_items = n_items
         self.n_factors = n_factors
@@ -18,9 +19,11 @@ class RecSysNCF:
             self.set_ratings(ratings)
 
     def set_ratings(self, ratings):
+        # Set ratings and prepare training data for NCF.
         self.ratings = ratings
 
     def fit_model(self, epochs=20, batch_size=64):
+        # Train NCF model with Keras and return prediction matrix.
         # Preparação dos dados: assume que self.ratings já está na forma de matriz usuários x itens
         ratings_matrix = self.ratings.to_numpy()
         known_ratings_mask = ~np.isnan(ratings_matrix)

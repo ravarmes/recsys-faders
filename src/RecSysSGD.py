@@ -5,6 +5,7 @@ from sklearn.preprocessing import MinMaxScaler
 
 class RecSysSGD:
     def __init__(self, n_factors=10, learning_rate=0.01, n_epochs=20, lambda_=0.1, ratings=None):
+        # Initialize SGD-based factorization hyperparameters and optional ratings.
         self.n_factors = n_factors  # Número de fatores latentes
         self.learning_rate = learning_rate  # Taxa de aprendizado
         self.n_epochs = n_epochs  # Número de épocas
@@ -14,11 +15,13 @@ class RecSysSGD:
             self.set_ratings(ratings)
 
     def set_ratings(self, ratings):
+        # Set ratings and preprocess for SGD training.
         self.ratings = ratings.fillna(0)  # Substitui NaN por 0
         # Normaliza as classificações para o intervalo [1, 5]
         self.ratings_scaled = pd.DataFrame(self.scaler.fit_transform(self.ratings), index=ratings.index, columns=ratings.columns)
 
     def fit_model(self):
+        # Train latent factors with SGD and return predictions.
         m, n = self.ratings_scaled.shape
         # Inicializa os fatores latentes de usuários e itens
         U = np.random.rand(m, self.n_factors)

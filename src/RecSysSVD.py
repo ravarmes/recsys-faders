@@ -6,31 +6,34 @@ from math import sqrt
 
 class RecSysSVD:
     def __init__(self, n_factors=50, ratings=None):
+        # Initialize SVD recommender with number of latent factors.
         self.n_factors = n_factors
         if ratings is not None:
             self.set_ratings(ratings)
 
     def set_ratings(self, ratings):
-        self.ratings = ratings.fillna(0)  # Preenche os valores ausentes com 0 para a SVD
-        # Observação: Preencher com a média ou outro valor pode ser considerado, dependendo do caso de uso
+        # Set ratings and fill NaNs for SVD compatibility.
+        self.ratings = ratings.fillna(0)  # Fill missing values with 0 for SVD
+        # Note: Filling with mean or other value may be considered depending on the use case
 
     def fit_model(self):
-        # Obtem os valores da matriz de classificações
+        # Factorize ratings via SVD and compute predictions and RMSE.
+        # Get the values from the ratings matrix
         matrix = self.ratings.values
         
-        # Aplica SVD na matriz de classificações
+        # Apply SVD to the ratings matrix
         U, sigma, Vt = svds(matrix, k=self.n_factors)
         
-        # Transforma sigma em uma matriz diagonal
+        # Transform sigma into a diagonal matrix
         sigma = np.diag(sigma)
         
-        # Calcula as classificações aproximadas usando a matriz de fatores
+        # Compute approximate ratings using the factor matrices
         approx_ratings = np.dot(np.dot(U, sigma), Vt)
         
-        # Converte as classificações aproximadas de volta para o formato de DataFrame
+        # Convert the approximate ratings back to a DataFrame
         self.predictions = pd.DataFrame(approx_ratings, index=self.ratings.index, columns=self.ratings.columns)
         
-        # Calcula o RMSE usando apenas as classificações originais não-nulas (não ausentes)
+        # Compute RMSE using only the original non-null ratings
         mask = self.ratings > 0
         mse = mean_squared_error(self.ratings[mask], self.predictions[mask])
         rmse = sqrt(mse)
@@ -38,23 +41,23 @@ class RecSysSVD:
         return self.predictions, rmse
 
     def recommend_items(self, user_id, top_n=10):
-        # Obtém as predições para um usuário específico
+        # Return top-N not-yet-rated items for a user.
+        # Get predictions for a specific user
         user_predictions = self.predictions.loc[user_id].sort_values(ascending=False)
         
-        # Obtém os itens já classificados pelo usuário
+        # Get items already rated by the user
         known_items = self.ratings.loc[user_id] > 0
         
-        # Filtra as recomendações para incluir apenas itens não classificados pelo usuário
+        # Filter recommendations to include only items not yet rated by the user
         recommendations = user_predictions[~known_items].head(top_n)
         
         return recommendations
 
-# Exemplo de uso:
-# Supondo que `ratings_df` seja seu DataFrame de classificações, onde as linhas representam usuários
-# e as colunas representam itens, com classificações ausentes representadas por NaN
+# Usage example:
+# Assuming `ratings_df` is your ratings DataFrame with users as rows and items as columns, with NaN for missing ratings
 # ratings_df = pd.DataFrame(...)
 # rec_sys_svd = RecSysSVD(n_factors=50, ratings=ratings_df)
 # predictions, rmse = rec_sys_svd.fit_model()
 # print(f"RMSE: {rmse}")
-# recommendations = rec_sys_svd.recommend_items(user_id='algum_id_de_usuario', top_n=10)
+# recommendations = rec_sys_svd.recommend_items(user_id='some_user_id', top_n=10)
 # print(recommendations)

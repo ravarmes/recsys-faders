@@ -51,6 +51,46 @@ Context: Recommender systems have become fundamental in modern society as they h
 | RecSysNCF                            | Neural Collaborative Filtering is a modern approach to collaborative filtering that uses neural networks to model complex, nonlinear interactions between users and items, aiming to enhance recommendation quality.                                    |
 | TestAlgorithmDepolarizeFair         | Test script for the depolarization and fairness algorithm (AlgorithmDepolarizeFair) |
 
+## :hammer_and_wrench: Usage
+
+- Install dependencies:
+  - Windows: `python -m pip install -r requirements.txt`
+- Run the experiments:
+  - `python src/TestAlgorithmDepolarizeFair.py`
+- Minimal example:
+  - Create an estimated ratings matrix using one of the RecSys algorithms and then apply the AlgorithmDepolarizeFair to reduce polarization and individual unfairness while keeping accuracy acceptable.
+
+```python
+from RecSys import RecSys
+from AlgorithmUserFairness import Polarization, IndividualLossVariance, RMSE
+from AlgorithmDepolarizeFair import AlgorithmDepolarize
+
+# Read dataset and estimate ratings
+recsys = RecSys(n_users=1000, n_items=1000, top_users=True, top_items=True)
+X, users_info, items_info = recsys.read_dataset(1000, 1000, True, True, data_dir="data/MovieLens-1M")
+omega = ~X.isnull()
+X_est = recsys.compute_X_est(X, algorithm='RecSysSVD')
+
+# Evaluate fairness/accuracy
+pol = Polarization(); ilv = IndividualLossVariance(X, omega, 0); rmse = RMSE(X, omega)
+print(pol.evaluate(X_est), ilv.evaluate(X_est), rmse.evaluate(X_est))
+
+# Apply depolarization/impartiality algorithm
+alg = AlgorithmDepolarize(X, omega, 0)
+list_X_est = alg.evaluate(X_est, alpha=0.4, h=20)
+
+# Build optimization matrices and final recommendation
+losses = [ilv.get_losses(m) for m in list_X_est]
+pols = [pol.get_polarizations(m) for m in list_X_est]
+ZIL = AlgorithmDepolarize.losses_to_ZIL(losses, n_items=X.shape[1])
+ZIP = AlgorithmDepolarize.polarizations_to_ZIP(pols, n_items=X.shape[1])
+X_pi = AlgorithmDepolarize.make_matrix_X_pi_annealing(list_X_est, ZIL, ZIP)
+```
+
+Notes:
+- Excel export requires the openpyxl package (already listed in requirements.txt).
+- If you plan to use RecSysNCF, install TensorFlow separately and ensure a compatible version.
+
 ## :email: Contact
 
 Rafael Vargas Mesquita - [GitHub](https://github.com/ravarmes) - [LinkedIn](https://www.linkedin.com/in/rafael-vargas-mesquita) - [Lattes](http://lattes.cnpq.br/6616283627544820) - **ravarmes@hotmail.com**

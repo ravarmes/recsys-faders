@@ -6,6 +6,7 @@ from sklearn.metrics import mean_squared_error
 class UserFairness():
         
     def __init__(self, n_users, n_movies, top_users, top_movies, l, theta, k):
+        # Initialize fairness configuration parameters.
         self.n_users = n_users
         self.n_movies = n_movies
         self.top_users = top_users
@@ -19,12 +20,11 @@ class UserFairness():
 class Polarization():
     
     def evaluate(self, X_est):
-        #print("def evaluate(self, X_est):")
-        #print("X_est")
-        #print(X_est)
+        # Compute average variance across items as polarization metric.
         return X_est.var(axis=0,ddof=0).mean()
 
     def gradient(self, X_est):
+        # Return gradient of polarization utility over estimated ratings.
         """
         Returns the gradient of the divergence utility defined on the
         estimated ratings of the original users.
@@ -34,13 +34,6 @@ class Polarization():
         G = D.values
         return  G
     
-    # def get_polarizations(self, X_est):
-    #     polarizations = []
-    #     for col in X_est.columns:
-    #         item_polarization = self.evaluate(X_est[col])
-    #         polarizations.append(item_polarization)
-    #     return polarizations
-    
     def get_polarizations(self, X_est):
         polarizations = X_est.apply(self.evaluate, axis=0)
         return polarizations
@@ -49,6 +42,7 @@ class Polarization():
 class IndividualLossVariance():
     
     def __init__(self, X, omega, axis):
+        # Initialize structures for individual loss variance along the specified axis.
         self.axis = axis
         self.omega = omega
         self.X = X.mask(~omega)
@@ -62,11 +56,13 @@ class IndividualLossVariance():
         return losses
         
     def evaluate(self, X_est):
+        # Evaluate variance of per-user/item losses.
         losses = self.get_losses(X_est)
         var =  losses.values.var()
         return var
 
     def gradient(self, X_est):
+        # Compute gradient of the individual loss variance utility.
         """
         Returns the gradient of the utility.
         The output is an n by d matrix which is flatten.
@@ -90,6 +86,7 @@ class IndividualLossVariance():
 class GroupLossVariance():
     
     def __init__(self, X, omega, G, axis):
+        # Initialize group-based loss variance structures and mappings.
         self.X = X 
         self.omega = omega
         self.G = G
@@ -130,11 +127,13 @@ class GroupLossVariance():
         return losses
         
     def evaluate(self, X_est):
+        # Evaluate variance across group losses.
         losses = self.get_losses(X_est)
         var =  losses.values.var()
         return var
 
     def gradient(self, X_est):
+        # Compute gradient for group loss variance utility.
         """
         Returns the gradient of the utility.
         The output is an n by d matrix which is flatten.
@@ -170,12 +169,14 @@ class GroupLossVariance():
 class ImpartialityAlgorithm():
     
     def __init__(self, X, omega, axis):
+        # Initialize impartiality algorithm context and masks.
         self.axis = axis
         self.omega = omega
         self.X = X.mask(~omega)
         self.omega_user = omega.sum(axis=axis)
         
     def get_differences(self, X_est):
+        # Compute mean difference between observed and estimated ratings per row.
         X = self.X
         X_est = X_est.mask(~self.omega)
         
@@ -201,6 +202,7 @@ class ImpartialityAlgorithm():
         return list_dif_mean
         
     def evaluate(self, X_est):
+        # Shift estimated ratings by per-row mean difference and clip to [1,5].
         list_dif_mean = self.get_differences(X_est)
         for i in range(0, len(X_est.index)):
             for j in range(0, len(X_est.columns)):
@@ -214,10 +216,12 @@ class ImpartialityAlgorithm():
 class RMSE():
     
     def __init__(self, X, omega):
+        # Initialize RMSE evaluator with known ratings mask.
         self.omega = omega
         self.X = X.mask(~omega)        
         
     def evaluate(self, X_est):
+        # Compute RMSE over known ratings positions.
         X_not_na = self.X.values[~np.isnan(self.X.values)]
         X_est_not_na = X_est.values[~np.isnan(self.X.values)]
         

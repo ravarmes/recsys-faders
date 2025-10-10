@@ -3,32 +3,39 @@ import pandas as pd
 from abc import ABCMeta, abstractmethod
 import numpy.ma as ma
 
-class RecSysALS():
+class RecSysALS:
     __metaclass__ = ABCMeta
     
     def __init__(self, rank, lambda_=1e-6, ratings=None):
+        # Initialize ALS hyperparameters and optional ratings.
         self.rank = rank
         self.lambda_ = lambda_
         if ratings is not None:
             self.set_ratings(ratings)
     
     def set_ratings(self, ratings):
+        # Set ratings matrix and count known ratings per user and item.
         self.ratings = ratings
         self.num_of_known_ratings_per_user = (~self.ratings.isnull()).sum(axis=1)
         self.num_of_known_ratings_per_movie = (~self.ratings.isnull()).sum(axis=0)
 
     def get_U(self):
+        # Return user latent matrix U as DataFrame.
         return pd.DataFrame(self.U, index=self.ratings.index)
     
     def get_V(self):
+        # Return item latent matrix V as DataFrame.
         return pd.DataFrame(self.V, columns=self.ratings.columns)
     
     @abstractmethod
     def fit_model(self):
+        # Fit model and compute predictions (abstract or implementation).
         pass
 
     def als(self, X, k, lambda_, max_iter, threshold):
+        # Run ALS alternating updates to factorize ratings X into U and V.
         def solve_V(X, W, U):
+            # Solve item factors V given U and observed mask W.
             X = X.values
             n, d = X.shape
             V = np.zeros((d, k))
@@ -41,6 +48,7 @@ class RecSysALS():
             return V
 
         def solve_U(X, W, V):
+            # Solve user factors U given V and observed mask W.
             X = X.values
             W = W.values
             n, d = X.shape
@@ -74,6 +82,7 @@ class RecSysALS():
 
 class als_RecSysALS(RecSysALS):
     def fit_model(self, ratings=None, max_iter=50, threshold=1e-5):
+        # Fit ALS model and return predictions and RMSE.
         X = self.ratings if ratings is None else ratings
         self.U, self.V = self.als(X, self.rank, self.lambda_, max_iter, threshold)
         self.pred = pd.DataFrame(self.U.dot(self.V), index=X.index, columns=X.columns)

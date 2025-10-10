@@ -5,7 +5,8 @@ import pandas as pd
 import traceback
 
 def print_results(dataset, algorithm, alpha, h, n_users, n_items, Rpol, Rindv, result, original=False):
-
+    # Print metrics to console, append them to a text file, and collect them in memory for CSV export.
+    
     if original == True:
         h = 0
 
@@ -35,6 +36,7 @@ def print_results(dataset, algorithm, alpha, h, n_users, n_items, Rpol, Rindv, r
 
 
 def save_matrices(X, X_est, X_pi, dataset, algorithm):
+    # Save input, baseline estimated, and optimized matrices to Excel files.
     print("\n\nX")
     print(X)
     print("\n\nX_est")
@@ -138,8 +140,8 @@ for dataset in datasets:
                         # print("list_polarizations")
                         # print(list_polarizations)
 
-                        ZIL = AlgorithmDepolarize.losses_to_ZIL(list_losses, n_items) # Matriz Z para as perdas individuais dos itens
-                        ZIP = AlgorithmDepolarize.polarizations_to_ZIP(list_polarizations, n_items) # Matriz Z para as polarizações individuais dos itens
+                        ZIL = AlgorithmDepolarize.losses_to_ZIL(list_losses, n_items) # Z matrix for individual item losses
+                        ZIP = AlgorithmDepolarize.polarizations_to_ZIP(list_polarizations, n_items) # Z matrix for individual item polarizations
 
                         # Calculate the recommendation matrix optimized by Simulated Annealing
                         X_pi = AlgorithmDepolarize.make_matrix_X_pi_annealing(list_X_est, ZIL, ZIP)

@@ -5,20 +5,21 @@ from sklearn.impute import SimpleImputer
 from abc import ABCMeta, abstractmethod
 
 class RecSysKNN:
-    __metaclass__ = ABCMeta
-    
     def __init__(self, k, ratings=None, user_based=True):
+        # Initialize KNN recommender with k and mode (user/item-based).
         self.k = k
         self.user_based = user_based
         if ratings is not None:
             self.set_ratings(ratings)
     
     def set_ratings(self, ratings):
+        # Set ratings matrix for KNN.
         self.ratings = ratings
         self.num_of_known_ratings_per_user = (~self.ratings.isnull()).sum(axis=1)
         self.num_of_known_ratings_per_item = (~self.ratings.isnull()).sum(axis=0)
 
     def get_similarity_matrix(self):
+        # Compute cosine similarity matrix (user- or item-based).
         if self.user_based:
             similarity = pd.DataFrame(cosine_similarity(self.ratings.fillna(0)), index=self.ratings.index, columns=self.ratings.index)
         else:
@@ -26,6 +27,7 @@ class RecSysKNN:
         return similarity
     
     def knn_filtering(self, similarity):
+        # Keep top-k neighbors and normalize similarity rows.
         for i in similarity.index:
             sorted_neighbors = similarity.loc[i].sort_values(ascending=False)
             keep = sorted_neighbors.iloc[:self.k+1].index
@@ -34,6 +36,7 @@ class RecSysKNN:
         return similarity
     
     def fit_model(self, max_iter=50, threshold=1e-5):
+        # Predict ratings using KNN with similarity-based aggregation.
         similarity = self.get_similarity_matrix()
         knn_similarity = self.knn_filtering(similarity)
         

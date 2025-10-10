@@ -6,6 +6,7 @@ class RecSysExampleData20Items:
     ###################################################################################################################
     # function to read the data
     def read_movieitems(n_users=40, n_movies=20, top_users=False, top_movies=False, data_dir="Data/Movie20Items"):
+        # Read a small example dataset of 20 movie items and return as DataFrame.
         # get ratings
         df = pd.read_table('{}/x-estimated.dat'.format(data_dir),names=['UserID','MovieID','Rating','Timestamp'], sep='::', engine='python')
 
