@@ -1,0 +1,276 @@
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 0; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,12770505942174734
+Individual Loss Variance (Rindv): 0,034572808150869556
+Root Mean Squared Error (RMSE): 0,8755280940414498
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 4; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,10469513025080168
+Individual Loss Variance (Rindv): 0,034143418101167396
+Root Mean Squared Error (RMSE): 0,8770814737372762
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 8; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09034102410883402
+Individual Loss Variance (Rindv): 0,033348877158555265
+Root Mean Squared Error (RMSE): 0,8802817254670189
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 12; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09275983211022332
+Individual Loss Variance (Rindv): 0,03339506171819707
+Root Mean Squared Error (RMSE): 0,8797125790483092
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 16; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09229123111893107
+Individual Loss Variance (Rindv): 0,033348748272374405
+Root Mean Squared Error (RMSE): 0,8798398921865661
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 20; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09409600704596909
+Individual Loss Variance (Rindv): 0,03353053553455478
+Root Mean Squared Error (RMSE): 0,8793184507463409
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 24; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09409444910597245
+Individual Loss Variance (Rindv): 0,033501398363604086
+Root Mean Squared Error (RMSE): 0,879420787331361
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 28; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,08987814447196572
+Individual Loss Variance (Rindv): 0,03318725517386355
+Root Mean Squared Error (RMSE): 0,8804863483962064
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 32; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09018780001764452
+Individual Loss Variance (Rindv): 0,03346783584902225
+Root Mean Squared Error (RMSE): 0,880531781576868
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 36; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,0919822839487112
+Individual Loss Variance (Rindv): 0,033394810517115084
+Root Mean Squared Error (RMSE): 0,8800031553582957
+
+Dataset: MovieLens-1M; Algorithm: RecSysALS; alpha: 0.2; h: 40; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09023133342112738
+Individual Loss Variance (Rindv): 0,03330513000817429
+Root Mean Squared Error (RMSE): 0,8803799396907812
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 0; n_users: 1000; n_items: 1000
+Polarization (Rpol): 1,1498565301883161
+Individual Loss Variance (Rindv): 0,4359260837101166
+Root Mean Squared Error (RMSE): 1,0872761768834653
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 4; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,6789529739619858
+Individual Loss Variance (Rindv): 0,3747327702704
+Root Mean Squared Error (RMSE): 1,1258617694196347
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 8; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,6498549687919456
+Individual Loss Variance (Rindv): 0,36041171885803813
+Root Mean Squared Error (RMSE): 1,1413455377242654
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 12; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,6589685994426162
+Individual Loss Variance (Rindv): 0,39732694001247704
+Root Mean Squared Error (RMSE): 1,1329321167007957
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 16; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,6480143617593755
+Individual Loss Variance (Rindv): 0,3577979809355256
+Root Mean Squared Error (RMSE): 1,1426849141844215
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 20; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,6474397380710655
+Individual Loss Variance (Rindv): 0,36576735583016623
+Root Mean Squared Error (RMSE): 1,1416664366412743
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 24; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,6582077448835557
+Individual Loss Variance (Rindv): 0,362386473704716
+Root Mean Squared Error (RMSE): 1,13693556362796
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 28; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,6700109025001535
+Individual Loss Variance (Rindv): 0,37164421905760897
+Root Mean Squared Error (RMSE): 1,1307187497137283
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 32; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,6670027563107213
+Individual Loss Variance (Rindv): 0,3650069122647235
+Root Mean Squared Error (RMSE): 1,1334286865248615
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 36; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,6517787053772591
+Individual Loss Variance (Rindv): 0,3597038066259445
+Root Mean Squared Error (RMSE): 1,140550065621274
+
+Dataset: MovieLens-1M; Algorithm: RecSysKNN; alpha: 0.2; h: 40; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,6509835403605383
+Individual Loss Variance (Rindv): 0,36121383285091746
+Root Mean Squared Error (RMSE): 1,1413441115988707
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 0; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,042189901560820246
+Individual Loss Variance (Rindv): 0,03025203706562397
+Root Mean Squared Error (RMSE): 0,8575417587626291
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 4; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,0330803386010877
+Individual Loss Variance (Rindv): 0,028286364555292407
+Root Mean Squared Error (RMSE): 0,8664265339623646
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 8; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,03190838113394067
+Individual Loss Variance (Rindv): 0,027731840974926217
+Root Mean Squared Error (RMSE): 0,8673437965650678
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 12; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,03374670299791422
+Individual Loss Variance (Rindv): 0,026240867963180124
+Root Mean Squared Error (RMSE): 0,8654209848480157
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 16; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,0346203185283195
+Individual Loss Variance (Rindv): 0,027322329497300495
+Root Mean Squared Error (RMSE): 0,863697753855687
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 20; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,03422999636090215
+Individual Loss Variance (Rindv): 0,027439236804147314
+Root Mean Squared Error (RMSE): 0,8634621515705498
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 24; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,034785249748489074
+Individual Loss Variance (Rindv): 0,02633688448530097
+Root Mean Squared Error (RMSE): 0,8632629346591267
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 28; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,03348386666124409
+Individual Loss Variance (Rindv): 0,02724202905561399
+Root Mean Squared Error (RMSE): 0,8655264356463177
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 32; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,035265839999769
+Individual Loss Variance (Rindv): 0,02785298501204262
+Root Mean Squared Error (RMSE): 0,8632816545507118
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 36; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,035103826021668144
+Individual Loss Variance (Rindv): 0,02760284354072291
+Root Mean Squared Error (RMSE): 0,8629568193156292
+
+Dataset: MovieLens-1M; Algorithm: RecSysNMF; alpha: 0.2; h: 40; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,03301540537617297
+Individual Loss Variance (Rindv): 0,026397610290280246
+Root Mean Squared Error (RMSE): 0,8660248601200926
+
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 0; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,36140015520406416
+Individual Loss Variance (Rindv): 3,747608317069726
+Root Mean Squared Error (RMSE): 2,54324903187703
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 4; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,11836809968085554
+Individual Loss Variance (Rindv): 2,619483845150993
+Root Mean Squared Error (RMSE): 2,424147841574462
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 8; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,12003228713222415
+Individual Loss Variance (Rindv): 2,6489724548866116
+Root Mean Squared Error (RMSE): 2,4209240239926477
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 12; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,11565818641284019
+Individual Loss Variance (Rindv): 2,724754603475051
+Root Mean Squared Error (RMSE): 2,4274320774436293
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 16; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,11143629267465037
+Individual Loss Variance (Rindv): 2,789145028284446
+Root Mean Squared Error (RMSE): 2,433166943737381
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 20; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,11274967397811887
+Individual Loss Variance (Rindv): 2,7802376679942618
+Root Mean Squared Error (RMSE): 2,4308720424450434
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 24; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,11916834850116849
+Individual Loss Variance (Rindv): 2,6491203755061052
+Root Mean Squared Error (RMSE): 2,422558808452096
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 28; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,12046549692232286
+Individual Loss Variance (Rindv): 2,685567093970315
+Root Mean Squared Error (RMSE): 2,4193804264685017
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 32; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,1218580933476357
+Individual Loss Variance (Rindv): 2,6740037733429394
+Root Mean Squared Error (RMSE): 2,4176903489064547
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 36; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,12114780755906424
+Individual Loss Variance (Rindv): 2,6896344510750327
+Root Mean Squared Error (RMSE): 2,4185856874759244
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.2; h: 40; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,11785953791347713
+Individual Loss Variance (Rindv): 2,719994529515643
+Root Mean Squared Error (RMSE): 2,4238219553581075
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 0; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,3612255045893139
+Individual Loss Variance (Rindv): 3,7467392055074207
+Root Mean Squared Error (RMSE): 2,5433454375745947
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 4; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,10176381057755847
+Individual Loss Variance (Rindv): 2,622214614531526
+Root Mean Squared Error (RMSE): 2,453942650601423
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 8; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,11578439317689576
+Individual Loss Variance (Rindv): 2,513054580053534
+Root Mean Squared Error (RMSE): 2,435075061351834
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 12; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09269284090462064
+Individual Loss Variance (Rindv): 2,4127405839388194
+Root Mean Squared Error (RMSE): 2,4799039576515955
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 16; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09233359815695866
+Individual Loss Variance (Rindv): 2,4195526151205047
+Root Mean Squared Error (RMSE): 2,4795447695655732
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 20; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09097767754329604
+Individual Loss Variance (Rindv): 2,4774962841752033
+Root Mean Squared Error (RMSE): 2,480119686971331
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 24; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09901553735356561
+Individual Loss Variance (Rindv): 2,5254983911311206
+Root Mean Squared Error (RMSE): 2,461577357160469
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 28; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,085900256925665
+Individual Loss Variance (Rindv): 2,559715715106436
+Root Mean Squared Error (RMSE): 2,4885000202144933
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 32; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09433073155621965
+Individual Loss Variance (Rindv): 2,4148275808456203
+Root Mean Squared Error (RMSE): 2,4761915630515854
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 36; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,10057075041964005
+Individual Loss Variance (Rindv): 2,3928417762737433
+Root Mean Squared Error (RMSE): 2,4644299738584077
+
+Dataset: MovieLens-1M; Algorithm: RecSysSGD; alpha: 0.4; h: 40; n_users: 1000; n_items: 1000
+Polarization (Rpol): 0,09353791503013428
+Individual Loss Variance (Rindv): 2,432824669609915
+Root Mean Squared Error (RMSE): 2,476238942202249
