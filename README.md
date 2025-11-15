@@ -22,9 +22,11 @@
   </a>
 </p>
 
-<div align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/So0rJ74nZdA?si=snikegmz7pEdfBh4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-</div>
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=So0rJ74nZdA">
+    <img src="https://img.youtube.com/vi/So0rJ74nZdA/hqdefault.jpg" alt="Watch the video" />
+  </a>
+</p>
 
 ## :page_with_curl: About the project <a name="-sobre"/></a>
 
